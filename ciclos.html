@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Ciclos</title>
+	<script type="text/javascript">
+	var c,b,t,boton;
+	function calcular(){
+		var numero=Number(t.value);
+		var factorial=1;
+		var i=1;
+		while(i<=numero){
+			factorial*=i;
+			i++;
+		}
+		alert(factorial);
+	}
+
+	function inicio(){
+		c= document.getElementById("caja");
+		b= document.getElementById("otracaja");
+		t=document.getElementById("alejandra");
+		boton=document.getElementById("botoncito");
+
+		boton.addEventListener("click",calcular);
+	// 	// c.innerHTML+= "<strong>Bye</strong><br><em>papá!</em>";
+	// 	var gritos = 10;
+	// 	while(gritos>0){
+	// 		c.innerHTML+="!";
+	// 		gritos--;
+	// 	}
+	// 	c.innerHTML+="h!";
+	// }
+		// var numero =103;
+		// var residuo;
+		// residuo = numero%2;
+		// c.innerHTML=residuo;
+		var numeros = 1;
+		var residuo;
+		while(numeros<51){
+			residuo = numeros%2;
+			if(residuo==0){
+				c.innerHTML+=" "+numeros;
+			}else{
+				b.innerHTML+=" "+numeros;
+			}
+			numeros++;
+		}
+
+	}
+	</script>						
+</head>
+<body>
+	<input type="text" id="alejandra">
+	<input type="button" id="botoncito" value="Tocame">
+
+	<div id="caja">Pares</div>
+	<div id="otracaja">Impares</div>
+	<script type="text/javascript">
+	inicio();
+	</script>
+</body>
+</html>
